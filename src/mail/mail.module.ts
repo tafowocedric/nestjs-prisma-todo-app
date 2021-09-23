@@ -4,9 +4,9 @@ import { MailService } from './mail.service';
 
 const mailerOptions = {
 	transport: {
-		host: 'smtp.gmail.com',
-		port: 465,
-		secure: true,
+		host: process.env.SMTP_HOST,
+		port: parseInt(process.env.SMTP_PORT),
+		secure: Boolean(process.env.IS_SMTP_SECRET),
 		auth: {
 			user: process.env.SMTP_USER,
 			pass: process.env.SMTP_PASSWORD
