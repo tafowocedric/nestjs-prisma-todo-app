@@ -8,8 +8,8 @@ const mailerOptions = {
 		port: 465,
 		secure: true,
 		auth: {
-			user: 'vegascedrictest@gmail.com',
-			pass: 'VrichCrich99'
+			user: process.env.SMTP_USER,
+			pass: process.env.SMTP_PASSWORD
 		}
 	},
 	defaults: {
